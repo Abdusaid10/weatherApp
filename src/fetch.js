@@ -1,5 +1,3 @@
-import Unsplash from 'unsplash-js';
-
 global.fetch = fetch;
 
 const weather = {};
