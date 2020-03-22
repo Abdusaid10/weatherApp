@@ -7,18 +7,31 @@
 </head>
 <body>
 
-  <div>
-    <input type="text" id="city-val">
-    <input id="submitBtn" type="submit" value="Submit">
-  </div>
-  <div>
-    <h3 class="name"></h3>
-    <p class="temp-min"></p>
-    <p class="temp-max"></p>
-    <p class="desc"></p>
-    <p class="wind-speed"></p>
-    <p class="clouds"></p>
-    <p class="timezone"></p>
+  
+  <div class="container">
+    <div class="input-block">
+      <input type="text" id="city-val">
+      <input id="submitBtn" type="submit" value="Submit">
+    </div>
+    <div class="info-block">
+      <div class="main-info">
+        <div class="icon-desc">
+          <img src="" alt="" srcset="" class="icon">
+          <p class="desc"></p>
+        </div>
+        <div class="temp-city">
+          <p class="temp"></p>
+          <h3 class="name"></h3>
+        </div>
+      </div>
+      <div class="additional-info">
+        <p class="temp-min"></p>
+        <p class="temp-max"></p>
+        <p class="wind-speed"></p>
+        <p class="clouds"></p>
+        <p class="timezone"></p>
+      </div>
+    </div>
   </div>
   <script src="main.js"></script>
 </body>

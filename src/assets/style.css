@@ -1,0 +1,69 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  margin: 2rem auto;
+  background-color: blueviolet;
+  width: 368px;
+  height: 720px;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  text-align: center;
+}
+.input-block input{
+  border: none;
+}
+.input-block, .info-block{
+  z-index: 1;
+}
+.container .input-block{
+  padding-top: 10px;
+  display: inherit;
+  flex-direction: row;
+  border: none;
+  border-radius: 10px 10px 10px;
+}
+
+.info-block{
+  position: relative;
+  display: block;
+  height: 100%;
+  width: 100%;
+  color: red;
+}
+.container .bckg-img {
+  position: absolute;
+  top: 0;
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+}
+
+#submitBtn{
+  background-color: rgba(200, 100, 180, .5);
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.info-block .icon-desc{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+}
+
+.info-block .additional-info{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+.info-block .additional-info p{
+  padding: 10px;
+}
