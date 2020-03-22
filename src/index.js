@@ -1,18 +1,20 @@
 import _ from 'lodash';
 import './assets/style.css';
 
-import getWeather from './fetch';
+import { FetchWeather, Geolocation } from './fetch';
 
+
+// FetchWeather.currentLocationWeather();
+Geolocation.getLoc();
 const eventListener = () => {
   const btn = document.querySelector('#submitBtn');
 
   const city = document.querySelector('#city-val');
   btn.addEventListener('click', () => {
-    getWeather(city);
+    FetchWeather.getWeather(city.value);
+    // FeatchImage.getImage();
     // ui();
   });
 };
 
-
-// forecast(city);
 eventListener();
