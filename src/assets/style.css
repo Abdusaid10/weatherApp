@@ -5,10 +5,13 @@ body{
 ::placeholder{
   color: white;
 }
+input {
+  background: none;
+}
 h3, span{
   color: white;
   font-family: 'Merriweather', serif;;
-  font-size: 14px;
+  font-size: 16px;
 }
 .container{
   display: flex;
@@ -21,7 +24,7 @@ h3, span{
   position: relative;
   align-items: center;
   text-align: center;
-  box-shadow: 6px 6px 45px 4px rgba(8, 2, 252, .59); /*#646364*/
+  box-shadow: 6px 6px 45px 4px rgba(8, 2, 252, .59);
   border-radius: 20px 20px 20px 20px;
 }
 
@@ -29,7 +32,6 @@ h3, span{
   position: absolute;
   top: 0;
   width: inherit;
-  /* height: 50%; */
   height: 100%;
   object-fit: cover;
   border-radius: 20px 20px 20px 20px;
@@ -89,14 +91,13 @@ h3, span{
 .info-block{
   display: flex;
   flex-direction: column;
-  background-color: rgba(33, 33, 47, 0.3);
+  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 25%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0.35) 88.8%, rgba(0,0,0, 0.001) 100%);
   align-items: center;
   position: absolute;
   top: 50%;
   height: 50%;
   width: 100%;
   border-radius: 0 0 20px 20px;
-  /* z-index: 1; */
 }
 .info-block .main-info{
   display: flex;
@@ -109,7 +110,6 @@ h3, span{
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  /* background-color: rgba(0, 0, 0, .2); */
 }
 .info-block .icon-desc .icon{
   width: 3rem;
@@ -122,11 +122,12 @@ h3, span{
 
 .icon-desc .desc, .temp, .temp-city .name{
   margin: 0;
-  /* color: black; */
   color: white;
 }
+.desc{
+  font-size: 18px;
+}
 .time, .date{
-  /* color: black; */
   color: white;
 }
 
@@ -157,6 +158,8 @@ h3, span{
   position: relative;
   height: 100%;
   width: 100%;
+  box-shadow: inset 6px 6px 45px 4px rgba(8,2, 252, .59);
+  z-index: 1;
 }
 .wind-block{
   background-color: rgb(253, 112, 47);
@@ -186,6 +189,7 @@ h3, span{
   position: absolute;
   top: 40%;
   left: 25%;
+  z-index: 1;
 }
 .humidity-block{
   background-color: rgb(167, 64, 127);
@@ -198,9 +202,11 @@ h3, span{
   position: absolute;
   top: 40%;
   left: 35%;
+  z-index: 1;
 }
 .visibility-block{
   background-color: rgb(85, 83, 148);
+  box-shadow: inset 6px 6px 45px 4px rgba(201, 149, 224, 0.59);
 }
 
 .visib-sub-block{
@@ -211,10 +217,12 @@ h3, span{
   position: absolute;
   top: 40%;
   left: 10%;
+  z-index: 1;
 }
 
 .clouds-block{
   background-color: rgb(2, 123, 179);
+  box-shadow: inset 6px 6px 45px 4px rgba(50, 7, 68, 0.59);
 }
 .clouds-sub-block{
   display: block;
@@ -233,6 +241,7 @@ h3, span{
   position: absolute;
   top: 70%;
   left: 30%;
+  z-index: 1;
 }
 /* autocopmlete styles change in chrome */
 input:-webkit-autofill,
