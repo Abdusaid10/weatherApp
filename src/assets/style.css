@@ -1,0 +1,261 @@
+body{
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+::placeholder{
+  color: white;
+}
+input {
+  background: none;
+}
+h3, span{
+  color: white;
+  font-family: 'Merriweather', serif;;
+  font-size: 16px;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  margin: 2rem auto;
+  background-color: white;
+  width: 368px;
+  height: 720px;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 0 45px -10px rgba(46, 125, 209, .75);
+  border-radius: 20px 20px 20px 20px;
+}
+
+.container .bckg-img {
+  position: absolute;
+  top: 0;
+  width: inherit;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px 20px 20px 20px;
+}
+.input-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-content: center;
+  background-color: rgba(0, 0, 0, .3);
+  position: absolute;
+  padding-bottom: 10px;
+  width: 100%;
+  top: 0;
+  margin: auto;
+  border-radius: 20px 20px 0 0;
+}
+/* search icon */
+.svg-icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+  fill: white;
+}
+
+.svg-icon circle {
+  stroke:white;
+  stroke-width: 1;
+}
+
+.input-block #searchBtn{
+  padding-top: 5px;
+  cursor: pointer;
+}
+/* end of search icon */
+.input-block .input-field{
+  outline: none;
+  border-width: 0 0 2px;
+  border-color: white;
+  padding: 10px;
+  background: none;
+  color: white;
+}
+.input-block .input-field:focus{
+  border-color: green;
+  padding: 10px;
+}
+
+.input-block, .info-block{
+  z-index: 1;
+}
+
+.info-block{
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 25%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0.35) 88.8%, rgba(0,0,0, 0.001) 100%);
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  height: 50%;
+  width: 100%;
+  border-radius: 0 0 20px 20px;
+}
+.info-block .main-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+.info-block .main-info .icon-desc{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.info-block .icon-desc .icon{
+  width: 3rem;
+  height: 3rem; 
+  padding: 10px;
+}
+.info-block .main-info .temp-city{
+  padding: 0;
+}
+
+.icon-desc .desc, .temp, .temp-city .name{
+  margin: 0;
+  color: white;
+}
+.desc{
+  font-size: 18px;
+}
+.time, .date{
+  color: white;
+}
+
+.temp{
+  font-size: 5rem;
+  font-weight: 100;
+  cursor: pointer;
+}
+.info-block .additional-info{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-gap: 15px;
+  grid-row-gap: 20px;
+  justify-items: center;
+  align-items: center;
+  padding: 45px 0 0 0;
+}
+
+.wind-block,
+.humidity-block, .visibility-block,
+.clouds-block{
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  justify-content: center;
+  align-content: space-between;
+  border-radius: 10px 10px;
+  padding: 10px 5px 15px 5px;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  box-shadow: inset 6px 6px 45px 4px rgba(8,2, 252, .59);
+  z-index: 1;
+}
+.wind-block{
+  background-color: rgb(253, 112, 47);
+}
+.wind-block .wind, 
+.humidity-block .humidity-h,
+.visibility-block .visibility-h,
+.clouds-block .clouds-h{
+  display: block;
+  padding-bottom: 10px;
+  width: 100%;
+}
+.wind-sub-block,
+.hum-sub-block,
+.visib-sub-block{
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  top: 50%;
+}
+.wind-sub-block{
+  background-color: rgb(192, 76, 91);
+  border-radius: 25px 0 10px 0;
+}
+.wind-speed{
+  position: absolute;
+  top: 40%;
+  left: 25%;
+  z-index: 1;
+}
+.humidity-block{
+  background-color: rgb(167, 64, 127);
+}
+.hum-sub-block{
+  background-color: rgb(102, 55, 84);
+  border-radius: 0 0 10px 10px;
+}
+.humidity{
+  position: absolute;
+  top: 40%;
+  left: 35%;
+  z-index: 1;
+}
+.visibility-block{
+  background-color: rgb(85, 83, 148);
+  box-shadow: inset 6px 6px 45px 4px rgba(201, 149, 224, 0.59);
+}
+
+.visib-sub-block{
+  background-color: rgb(15, 32, 59);  
+  border-radius: 0 0 10px 10px;
+}
+.visibility-block .visibility{
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  z-index: 1;
+}
+
+.clouds-block{
+  background-color: rgb(2, 123, 179);
+  box-shadow: inset 6px 6px 45px 4px rgba(50, 7, 68, 0.59);
+}
+.clouds-sub-block{
+  display: block;
+  position: absolute;
+  background-color:rgb(140, 171, 221);
+  border-radius: 10px 0 25px 0;
+  width: 100%;
+  height: 50%;
+  top: 0;
+}
+.clouds-h{
+  position: absolute;
+  top: 20%;
+}
+.clouds{
+  position: absolute;
+  top: 70%;
+  left: 30%;
+  z-index: 1;
+}
+/* autocopmlete styles change in chrome */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus{
+  border: none;
+  outline: none;
+  background: none;
+  -webkit-text-fill-color: white;
+}
